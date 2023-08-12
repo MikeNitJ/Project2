@@ -24,5 +24,5 @@ https://trello.com/b/DPGGF8gm/project-2
 
 ## Wireframe
 
-![Wireframe](images/Project2.png)
+![Wireframe](images/Project2pic.png)
 
