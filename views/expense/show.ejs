@@ -1,0 +1,28 @@
+
+<h1>
+    <%= expense.name%>
+</h1>
+<h2>
+    <div>
+        <%= expense.description%>
+    </div>
+
+    <div>
+        
+       $ <%= expense.price%>
+    </div>
+    <div>
+
+        <%= expense.date%>
+    </div>
+
+    <ul>
+        <a href="/expense/edit/<%=expense._id%>">
+            <button>Edit</button>
+        </a>
+        
+    </ul>
+
+    <a href="/main">
+        <button>Back</button>
+    </a>

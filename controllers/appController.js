@@ -30,6 +30,24 @@ router.get("/expense", async (req,res) =>{
     res.render("expense/index.ejs", {expenses})
 })
 
+router.get("/income/:id", async (req,res) =>{
+  let id = req.params.id
+  let income = await Income.findById(id)
+  res.render("income/show.ejs", {income})
+  console.log(income);
+})
+
+router.get("/expense/:id", async (req,res) =>{
+  let id = req.params.id
+  let expense = await Expense.findById(id)
+  res.render("expense/show.ejs", {expense})
+
+})
+
+
+
+
+
 
 
 router.get("/seed", async (req,res) => {

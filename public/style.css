@@ -7,28 +7,238 @@ h1{
     padding: 25%;
 }
 
+
+.data-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.income-container,
+.expense-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.total-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 .income {
     background-color: rgb(29, 146, 29);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin: 10px;
+    padding: 5px;
+
 }
+
 .expense {
     background-color: rgb(184, 24, 24);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin: 10px;
-    margin-right:auto
+    padding: 5px;
+
 }
 .header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 10px; 
-    background-color: #f0f0f0;
+    background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
 }
 
 .header a {
     text-decoration: none;
     color: #333;
+}
+
+.main-bg{
+    background-color: #829eb8;
+}
+
+
+
+
+
+
+.button-43 {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  /* width: 0%; */
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-43:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+  .button-43 {
+    padding: 1rem 2rem;
+  }
+}
+
+.button-container {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    gap: 10px; /* Add some spacing between buttons */
+    justify-content: space-around;
+    
+}
+
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.login-button {
+    background-color: #337ab7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #286090;
+}
+
+.login-button:focus {
+    outline: none;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+
+.signup-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.signup-button {
+    background-color: #337ab7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: #286090;
+}
+
+.signup-button:focus {
+    outline: none;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 400px) {
+    .signup-container {
+        width: 90%;
+    }
+}
+
+
+.data-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.income-container,
+.expense-container {
+    flex: 1;
+    max-width: 48%;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.data-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.income {
+    background-color: rgb(29, 146, 29);
+    color: white;
+}
+
+.expense {
+    background-color: rgb(184, 24, 24);
+    color: white;
+}
+
+.total-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.total-heading {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: bold;
 }

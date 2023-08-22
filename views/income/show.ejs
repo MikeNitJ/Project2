@@ -1,0 +1,28 @@
+
+<h1>
+    <%= income.name%>
+</h1>
+<h2>
+    <div>
+        <%= income.description%>
+    </div>
+
+    <div>
+        
+       $ <%= income.price%>
+    </div>
+    <div>
+
+        <%= income.date%>
+    </div>
+
+    <ul>
+        <a href="/income/edit/<%=income._id%>">
+            <button>Edit</button>
+        </a>
+        
+    </ul>
+
+    <a href="/main">
+        <button>Back</button>
+    </a>

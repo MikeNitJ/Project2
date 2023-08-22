@@ -1,11 +1,28 @@
+<body class="main-bg">
+   
+    <div class="button-container">
+        <a href="/income">
+            <button class="button-43" role="button">Income</button>
+
+        </a>
+        
+    
+    
+        <a href="/expense">
+            <button class="button-43" role="button">Expense</button>
+        </a>
+    </div>
+
+
+
 <ul >
         Income
 
         <% incomes.forEach(income => { %>
         <div class="income">
 
-            <li><%= income.name %></li>
-            <div><%=income.price%></div>
+            <li><a href="/income/<%=income._id%>"><%= income.name %></li></a>
+            <div>$ <%=income.price%></div>
         </div>
 
         <% }); %>
@@ -20,8 +37,8 @@
             
             <div class="expense">
 
-                <li><%= expense.name %></li>
-                <div><%=expense.price%></div>
+                <li><a href="/expense/<%=expense._id%>"><%= expense.name %></li></a>
+                <div>$ <%=expense.price%></div>
             </div>
             
             <% }); %>
@@ -33,20 +50,6 @@
     </ul>
     
         Total: <%=totalSummary%>
-<div>
 
-    <a href="/income">
-        <button>
-            Income
-        </button>
-    </a>
-    
-</div>
-<div>
-    <a href="/expense">
-        <button>
-            Expense
-        </button>
-    </a>
-    
-</div>
+</body>
+
