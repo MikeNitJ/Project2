@@ -1,0 +1,52 @@
+<ul >
+        Income
+
+        <% incomes.forEach(income => { %>
+        <div class="income">
+
+            <li><%= income.name %></li>
+            <div><%=income.price%></div>
+        </div>
+
+        <% }); %>
+
+
+        Total Income: <%=incomeSummary%>
+    </ul>
+    <ul >
+        Expense
+       <div>
+           <% expenses.forEach(expense => { %>
+            
+            <div class="expense">
+
+                <li><%= expense.name %></li>
+                <div><%=expense.price%></div>
+            </div>
+            
+            <% }); %>
+        </div> 
+
+
+        Total Expense: <%=expenseSummary%>
+
+    </ul>
+    
+        Total: <%=totalSummary%>
+<div>
+
+    <a href="/income">
+        <button>
+            Income
+        </button>
+    </a>
+    
+</div>
+<div>
+    <a href="/expense">
+        <button>
+            Expense
+        </button>
+    </a>
+    
+</div>

@@ -1,0 +1,35 @@
+I'm editing from edit.ejs
+
+
+<form action="/expense/edit/<%=expense._id%>?_method=PUT" method="POST">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" value="<%=expense.name%>" name="name">
+    </div>
+
+    <div>
+        <label for="name">Description:</label>
+        <input type="text" value="<%=expense.description%>" name="description">
+    </div>
+    <div>
+        <label for="name">Amount:</label>
+        <input type="text" value="<%=expense.price%>" name="price">
+    </div>
+
+    <div>
+        <label for="name">Date:</label>
+        <input type="text" value="<%=expense.date%>" name="date">
+    </div>
+
+
+
+
+    <input type="submit" value="Submit" />
+</form> 
+
+<form action="/expense/<%=expense._id%>?_method=DELETE" method="POST">
+
+    <a href="/expense/<%=expense._id%>">
+        <button >Delete</button></a>
+</form>
