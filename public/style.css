@@ -47,6 +47,7 @@ h1{
     justify-content: space-between; 
     align-items: center; 
     padding: 10px; 
+    /* background-color: #5f3e3e;  */
     background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
 }
 
@@ -63,7 +64,7 @@ h1{
 
 
 
-
+/* CSS */
 .button-43 {
   background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
   border-radius: .5rem;

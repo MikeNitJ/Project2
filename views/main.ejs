@@ -1,55 +1,43 @@
 <body class="main-bg">
-   
     <div class="button-container">
         <a href="/income">
             <button class="button-43" role="button">Income</button>
-
         </a>
-        
-    
-    
         <a href="/expense">
             <button class="button-43" role="button">Expense</button>
         </a>
     </div>
 
-
-
-<ul >
-        Income
-
-        <% incomes.forEach(income => { %>
-        <div class="income">
-
-            <li><a href="/income/<%=income._id%>"><%= income.name %></li></a>
-            <div>$ <%=income.price%></div>
+    <div class="data-container">
+        <div class="income-container">
+            <h3>Income</h3>
+            <ul>
+                <% incomes.forEach(income => { %>
+                    <li class="data-item income">
+                        <a href="/income/<%=income._id%>"><%= income.name %></a>
+                        <div>$ <%=income.price%></div>
+                    </li>
+                <% }); %>
+            </ul>
+            <p class="total-text">Total Income: <%=incomeSummary%></p>
         </div>
 
-        <% }); %>
+        <div class="expense-container">
+            <h3>Expense</h3>
+            <ul>
+                <% expenses.forEach(expense => { %>
+                    <li class="data-item expense">
+                        <a href="/expense/<%=expense._id%>"><%= expense.name %></a>
+                        <div>$ <%=expense.price%></div>
+                    </li>
+                <% }); %>
+            </ul>
+            <p class="total-text">Total Expense: <%=expenseSummary%></p>
+        </div>
+    </div>
 
-
-        Total Income: <%=incomeSummary%>
-    </ul>
-    <ul >
-        Expense
-       <div>
-           <% expenses.forEach(expense => { %>
-            
-            <div class="expense">
-
-                <li><a href="/expense/<%=expense._id%>"><%= expense.name %></li></a>
-                <div>$ <%=expense.price%></div>
-            </div>
-            
-            <% }); %>
-        </div> 
-
-
-        Total Expense: <%=expenseSummary%>
-
-    </ul>
-    
-        Total: <%=totalSummary%>
-
+    <div class="total-container">
+        <h3 class="total-heading">Total</h3>
+        <p class="total-amount"><%=totalSummary%></p>
+    </div>
 </body>
-
