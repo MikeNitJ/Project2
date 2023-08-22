@@ -9,5 +9,16 @@
     "mongoose": "^7.4.3",
     "morgan": "^1.10.0",
     "urlencode": "^1.1.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project2",
+  "description": "Income and Expense collector is an app that will collect all of the income and expense that you put in",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
