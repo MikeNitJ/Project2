@@ -30,19 +30,6 @@ router.get("/expense", async (req,res) =>{
     res.render("expense/index.ejs", {expenses})
 })
 
-router.get("/income/:id", async (req,res) =>{
-  let id = req.params.id
-  let income = await Income.findById(id)
-  res.render("income/show.ejs", {income})
-  console.log(income);
-})
-
-router.get("/expense/:id", async (req,res) =>{
-  let id = req.params.id
-  let expense = await Expense.findById(id)
-  res.render("expense/show.ejs", {expense})
-
-})
 
 
 
@@ -61,14 +48,14 @@ router.get("/seed", async (req,res) => {
             date: "8/20/2023",
           },
           {
-            name: "Zelle",
-            description: " AA send back the money",
+            name: "Selling things",
+            description: "Income from Amazon",
             price: 100 ,
             date: "8/3/2023",
           },
           {
-            name: "Zelle",
-            description: " Grandma send it for Grocery",
+            name: "Grocery",
+            description: " My parent send me a list to buy some stuff",
             price: 50 ,
             date: "8/1/2023",
           },
@@ -82,7 +69,7 @@ router.get("/seed", async (req,res) => {
         let seededExpense = await Expense.create([
             {
               name: "Electricity Bill",
-              description: "It was 50 last year",
+              description: "It was $50 last year",
               price: 200 ,
               date: "8/20/2023",
             },
@@ -213,6 +200,20 @@ router.delete("/expense/:id", async (req, res) => {
 
 
 
+    router.get("/income/:id", async (req,res) =>{
+      let id = req.params.id
+      let income = await Income.findById(id)
+      res.render("income/show.ejs", {income})
+      console.log(income);
+    })
+    
+    router.get("/expense/:id", async (req,res) =>{
+      let id = req.params.id
+      let expense = await Expense.findById(id)
+      res.render("expense/show.ejs", {expense})
+    
+    })
+    
 
 
 module.exports = router

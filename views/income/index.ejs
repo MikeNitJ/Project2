@@ -1,41 +1,29 @@
-<%incomes.forEach( income=> {%>
-
-    <h1>
-        <%= income.name%>
-    </h1>
-    <h2>
-        <div>
-            <%= income.description%>
+<body class="main-bg">
+    <div class="layout">
+        <div class="expense-list">
+            <% incomes.forEach(income => { %>
+            <div class="expense-item">
+                <h1><%= income.name %></h1>
+                <div class="expense-details">
+                    <p><strong>Description:</strong> <%= income.description %></p>
+                    <p><strong>Amount:</strong> $<%= income.price %></p>
+                    <p><strong>Date:</strong> <%= income.date %></p>
+                
+                    <div class="expense-actions">
+                        <a href="/income/edit/<%=income._id%>" class="button-43">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
         </div>
+    </div>
 
-        <div>
-            
-            <%= income.price%>
-        </div>
-        <div>
-
-            <%= income.date%>
-        </div>
-        <ul>
-            <a href="/income/edit/<%=income._id%>">
-                <button>Edit</button>
-            </a>
-            
-        </ul>
-    </h2>
-
-
-<%})%>
-
-
-    <ul>
+    <div class="button-container">
         <a href="/income/create">
             <button>Create</button>
-    </a>
-    
-
-
+        </a>
         <a href="/main">
             <button>Back</button>
-    </a>
-</ul>
+        </a>
+    </div>
+</body>

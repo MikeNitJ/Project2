@@ -1,28 +1,19 @@
-
-<h1>
-    <%= income.name%>
-</h1>
-<h2>
-    <div>
-        <%= income.description%>
+<body class="main-bg">
+    <div class="layout">
+        <div class="income-list">
+            <div class="income-item">
+                <h1><%= income.name %></h1>
+                <div class="income-details">
+                    <p><strong>Description:</strong> <%= income.description %></p>
+                    <p><strong>Amount:</strong> $<%= income.price %></p>
+                    <p><strong>Date:</strong> <%= income.date %></p>
+                </div>
+                <div class="income-actions button-container">
+                    <a href="/income/edit/<%=income._id%>" class="button-43">Edit</a>
+                    <a href="/income/create" class="button-43">Create</a>
+                    <a href="/main" class="button-43">Back</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div>
-        
-       $ <%= income.price%>
-    </div>
-    <div>
-
-        <%= income.date%>
-    </div>
-
-    <ul>
-        <a href="/income/edit/<%=income._id%>">
-            <button>Edit</button>
-        </a>
-        
-    </ul>
-
-    <a href="/main">
-        <button>Back</button>
-    </a>
+</body>

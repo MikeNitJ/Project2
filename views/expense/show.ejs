@@ -1,28 +1,17 @@
-
-<h1>
-    <%= expense.name%>
-</h1>
-<h2>
-    <div>
-        <%= expense.description%>
+<body class="main-bg">
+    <div class="income-list">
+        <div class="income-item">
+            <h1><%= expense.name %></h1>
+            <div class="income-details">
+                <p><strong>Description:</strong> <%= expense.description %></p>
+                <p><strong>Amount:</strong> $<%= expense.price %></p>
+                <p><strong>Date:</strong> <%= expense.date %></p>
+            </div>
+            <div class="income-actions button-container">
+                <a href="/expense/edit/<%=expense._id%>" class="button-43">Edit</a>
+                <a href="/expense/create" class="button-43">Create</a>
+                <a href="/main" class="button-43">Back</a>
+            </div>
+        </div>
     </div>
-
-    <div>
-        
-       $ <%= expense.price%>
-    </div>
-    <div>
-
-        <%= expense.date%>
-    </div>
-
-    <ul>
-        <a href="/expense/edit/<%=expense._id%>">
-            <button>Edit</button>
-        </a>
-        
-    </ul>
-
-    <a href="/main">
-        <button>Back</button>
-    </a>
+</body>
