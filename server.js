@@ -1,6 +1,10 @@
+require("dotenv").config();
+
+
 const express = require("express")
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 4321;
+
 const expressLayouts = require("express-ejs-layouts")
 const accountRoutes = require("./controllers/accountController")
 const session = require("express-session")
